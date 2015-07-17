@@ -1,4 +1,4 @@
-package minDeltaFinder
+package minDeltaUtil
 
 import (
 	"math"
@@ -10,11 +10,11 @@ func Finder(compareIndexOne, compareIndexTwo, returnIndex int) func([]string) st
 	smallestDelta = 1000
 	returnField := ""
 	return func(input []string) string {
-		val1, err := strconv.ParseInt(input[compareIndexOne], 10, 64)
+		val1, err := strconv.ParseFloat(input[compareIndexOne], 64)
 		if err != nil {
 			panic(err)
 		}
-		val2, err := strconv.ParseInt(input[compareIndexOne], 10, 64)
+		val2, err := strconv.ParseFloat(input[compareIndexOne], 64)
 		if err != nil {
 			panic(err)
 		}
